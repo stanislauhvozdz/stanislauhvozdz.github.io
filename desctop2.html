@@ -79,13 +79,16 @@
                             сферах жизни.</p>
                     </div>
                     <div class="score-newspaper">
-                        <div class="score-newspap--like">
-                            <img src="img/like.svg" alt="Like" height="50px" width="50px" class="score-newspaper__like">
+                        <div class="score-newspaper--like">
+                            <button class="like like-btn" type="button">
+                                <span class="likes-number">16</span>
+                            </button>
+                            
                         </div>
                         <div class="score-newspaper--social">
-                            <img src="img/twitter.svg" alt="Icon Twitter" height="50px" width="50px">
-                            <img src="img/facebook.svg" alt="Icon FaceBooK" height="50px" width="50px">
-                            <img src="img/vk.svg" alt="Icon VK" height="50px" width="50px">
+                            <a href="#"><img src="img/twitter.svg" alt="Icon Twitter" height="50px" width="50px"></a>
+                            <a href="#"><img src="img/facebook.svg" alt="Icon FaceBooK" height="50px" width="50px"></a>
+                            <a href="#"><img src="img/vk.svg" alt="Icon VK" height="50px" width="50px"></a>
                         </div>
                     </div>
 
@@ -117,8 +120,10 @@
                 <div class="remark-form">
 
                     <div class="remark-form-data">
-                        <input class="form-data--input remark-input" type="text" placeholder="Имя" pattern="/^[\w_]{6,200}$/">
-                        <input class="form-data--input remark-input" type="text" placeholder="Почта" pattern="/^[\w_]{6,200}$/">
+                        <input class="form-data--input remark-input" type="text" placeholder="Имя"
+                            pattern="/^[\w_]{6,200}$/">
+                        <input class="form-data--input remark-input" type="email" placeholder="Почта"
+                            pattern="/^[\w_]{6,200}$/">
                         <input class="form-data--input btn" type="submit">
                     </div>
                     <div class="remark-form-text">
@@ -149,7 +154,7 @@
 
 
 
-
+<script src="js/like.js"></script>
 </body>
 
 </html>
