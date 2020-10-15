@@ -20,18 +20,34 @@ body {
 a {
     text-decoration: none;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .container {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .header {
+    background-color: rosybrown;
     background-image: url(../img/header-bg.png);
     min-height: 581px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .header-nav {
@@ -69,9 +85,23 @@ a {
 .nav-link:active {
     color: rgba(255, 255, 255, 0.7);
 }
+.burger {
+    padding: 5px;
+    background-image: url(../img/menu.svg);
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: absolute;
+    display: none;
+}
 
-.news-article {
-    margin-bottom: 90px;
+
+.burger-active{
+    display: none;
 }
 
 .news-article__title {
@@ -140,17 +170,18 @@ a {
     padding: 0.6em 0.8em 0.5em 1.4em;
 }
 
-.news-article-wrapper {
+.small-row,
+.big-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-
-.article {
-    width: 387px;
-    margin-bottom: 25px;
+.small-row .article {
+    width: 32%;
+    margin: 0 auto 60px;
 }
-
+.article img {
+    width: 100%;
+}
 .article-title {
     font-weight: bold;
     font-size: 18px;
@@ -176,13 +207,15 @@ a {
 
 .article-big {
     height: 552px;
-    width: 590px;
+    width: 49.1%;
     color: #ffffff;
+    margin: 0 auto;
     position: relative;
+    margin-bottom: 60px;
 }
 
 .article-description {
-    width: 387px;
+    max-width: 387px;
 }
 .article-description .h3-big {
     color: #fff;
@@ -202,17 +235,20 @@ a {
 .big-1 {
     background-image: url(../img/article-4.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
 }
 
 .big-2 {
     background-image: url(../img/article-5.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center;
 }
 
 .article-big .article-tag {
     color: rgba(255, 255, 255, 0.7);
+}
+.display-none{
+    display: none;
 }
 
 .btn {
@@ -240,7 +276,7 @@ a {
 }
 
 .news-article-btn {
-    margin: 60px auto 0px;
+    margin: 60px auto 60px;
 }
 
 .aboutme .section-title {
@@ -249,27 +285,44 @@ a {
 
 .aboutme-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 30px;
     margin-bottom: 90px;
 }
 
+.aboutme-wrapper .left {
+    width: 50%;
+    overflow: hidden;
+    align-items: center;
+}
+
+.left img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
 .aboutme-decription {
+    width: 50%;
     margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .decription-text {
-    width: 500px;
+    width: 100%;
     padding-top: 25px;
-    margin-bottom: 142px;
 }
 
 .decription-citation {
+    margin-top: 50px;
     font-style: italic;
     font-size: 30px;
     line-height: 40px;
-    width: 550px;
+
     position: relative;
+    margin-bottom: 20px;
 }
 
 .decription-citation::before {
@@ -290,16 +343,18 @@ a {
 
 .portfolio-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
 }
 
 .portfolio-card {
-    width: 387px;
+    width: 32%;
     height: 525px;
     border-radius: 10px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     text-align: center;
     overflow: hidden;
+    margin: 0 auto 30px;
 }
 
 .card-title {
@@ -323,6 +378,7 @@ a {
     background-image: url(../img/portfolio1.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -331,6 +387,7 @@ a {
     background-image: url(../img/portfolio2.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding-left: 25px;
     padding-right: 25px;
     color: #fff;
@@ -340,6 +397,7 @@ a {
     background-image: url(../img/portfolio3.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     padding-left: 18px;
     padding-right: 18px;
 }
@@ -355,18 +413,6 @@ a {
     text-align: center;
 }
 
-.callback-wrapper {
-    margin: 0 auto;
-    background-image: url(../img/backcall-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 996px;
-    height: 637px;
-    margin-bottom: 80px;
-    border-radius: 10px;
-    padding: 50px 80px 0 80px;
-}
-
 input,
 textarea {
     border: 1px solid #000000;
@@ -374,11 +420,22 @@ textarea {
     background: rgba(255, 255, 255, 0.4);
     padding: 5px 15px;
 }
+textarea {
+    resize: none;
+}
 
 .callback-form {
+    background-image: url(../img/backcall-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    width: 82%;
+    padding: 60px 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .form-label {
@@ -387,6 +444,10 @@ textarea {
     font-size: 18px;
     line-height: 28px;
     padding-bottom: 20px;
+    display: inline-block;
+}
+.textlabel {
+    width: 48%;
 }
 
 .form-imput--name,
@@ -400,17 +461,17 @@ textarea {
     opacity: 0.7;
     margin-top: 15px;
     border-radius: 10px;
+    width: 100%;
+    padding: 20px;
 }
-
-.form-imput--name,
-.form-imput--email {
-    height: 63px;
-    width: 407px;
+.callback-form .arealabel {
+    width: 100%;
 }
 
 .form-imput--measage {
     padding-top: 10px;
-    width: 833px;
+    max-width: 100%;
+    height: 293px;
 }
 
 .callback-btn {
@@ -420,12 +481,27 @@ textarea {
     color: #202117;
     text-transform: uppercase;
 }
+.submit-button:disabled {
+    border: 1px solid rgba(240, 58, 58, 0.5);
+    color: rgba(240, 58, 58, 1);
+    font-weight: 700;
+}
+.comment-form.warning .comment-label {
+    color: #f05b29;
+}
 
+.comment-form.warning .comment-area {
+    color: #f52e2e;
+}
+.comment-form.warning .remark-form-data .submit-button {
+    color: #f05b29;
+    border: 1px solid rgba(240, 58, 58, 0.5);
+}
 .footer {
     background: #d7d1c9;
 
     height: 181px;
-    margin: 0 auto;
+    margin: 80px auto 0;
 
     display: flex;
     flex-direction: row;
@@ -467,7 +543,8 @@ textarea {
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
 
 .container-997 {
-    width: 997px;
+    max-width:1117px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -478,6 +555,10 @@ textarea {
 figure {
     padding: 0;
     margin: 40px 0;
+}
+figure img{
+    width: 100%;
+    margin: 0 auto;
 }
 
 .newspaper-text .section-title {
@@ -506,7 +587,7 @@ figure {
     background-repeat: no-repeat;
     cursor: pointer;
 }
-.like.added{
+.like.added {
     background-image: url(../img/like-black.svg);
     width: 50px;
     height: 50px;
@@ -558,11 +639,11 @@ figure {
 }
 
 .comment-newspapper-twit {
-    width: 793px;
+    max-width: 793px;
     padding: 20px 45px 50px;
     border-radius: 10px;
     background: #ece1e1;
-    margin: 0 auto;
+    margin-bottom: 80px;
 }
 
 .twit-name {
@@ -582,22 +663,25 @@ figure {
 
 .twit-text {
     margin-top: 10px;
+    margin-left: 10px;
 }
 .remark {
-    max-width: 793px;
-    margin: 0 auto;
+    max-width: 90%;
 }
 .remark-title {
     font-size: 24px;
     line-height: 33px;
     font-weight: bold;
     margin-bottom: 50px;
-    padding-left: 40px;
+    padding-left: 87px;
 }
 .remark-form {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-bottom: 80px;
+   
+    margin-left: 87px;
 }
 .remark-form-data {
     display: flex;
@@ -605,6 +689,7 @@ figure {
     align-content: space-between;
     justify-content: space-between;
     max-height: 206px;
+    margin-right: 80px;
 }
 .remark-form-data input:first-child {
     margin-top: 0;
@@ -621,10 +706,216 @@ figure {
     width: 220px;
     padding: 5px 0 10px;
 }
+.remark-btn{
+    width: 220px;
+    margin-top: 55px;
+}
 
 .remark-form-text textarea {
     border-radius: 10px;
+   
     width: 406px;
     height: 208px;
     padding: 20px;
 }
+.remark-span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+/* media */
+
+@media (max-width: 992px) {
+    .header-nav--list_item {
+        margin-left: 22px;
+    }
+    .textlabel {
+        width: 100%;
+    }
+    .article-title {
+        margin-top: 5px;
+        margin-bottom: 8px;
+        line-height: 20px;
+    }
+    .small-row .article {
+        margin: 0 auto 30px;
+    }
+    .article-description {
+        max-width: 290px;
+    }
+    .article-big .article-description {
+        position: absolute;
+        left: 35px;
+        bottom: 70px;
+    }
+    .aboutme-wrapper {
+        flex-direction: column;
+    }
+    .aboutme-wrapper .left {
+        margin: 0 auto;
+    }
+    .aboutme-decription {
+        width: 90%;
+    }
+    .decription-citation {
+        margin-top: 20px;
+    }
+    .portfolio-card {
+        width: 49%;
+        padding: 0 50px;
+    }
+    .card-title {
+        padding-top: 100px;
+    }
+    .comment-newspapper-twit {
+        width: 100%;
+    }
+    .remark-form{
+        flex-direction: column-reverse;
+    }
+    .remark-form-data {
+        margin-top: 20px;
+        max-height: none;
+    }
+    .remark-input{
+        padding: 20px 0;
+    }
+    .form-data--input{
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 100vh;
+    }
+    .header-nav--list {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        position: absolute;
+        padding: 0;
+    }
+    .header-nav--list-active{
+        opacity: 1;
+        position: relative;
+        top: 95px;
+        right: 45%;
+        transform: translate(50%);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .burger-active{
+        background-image: url(../img/close.svg);
+        
+    }
+    .header-nav--list_item {
+        margin: 15px 0;
+        padding: 7px 50px;
+    }
+
+    .burger{
+        display: block;
+        right: 20px;
+        top: 25px;
+        font-size: 0;
+        
+    }
+    
+    .article-big {
+        width: 100%;
+        margin: 15px 40px;
+    }
+    .article-big .article-description {
+        left: 130px;
+        bottom: 70px;
+    }
+    .small-row .article {
+        width: 49%;
+    }
+    .portfolio-card {
+        padding: 0 20px;
+    }
+    .card-title {
+        padding-top: 60px;
+    }
+    .list-link {
+        margin: 20px;
+    }
+    .callback-form {
+        padding: 30px 40px;
+    }
+
+    .comment-newspapper-twit{
+        width: 90%;
+    }
+    .remark {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .remark-form-text {
+        width: 46%;
+        order: 2;
+    }
+    .remark-title {
+        padding-left: 20px;
+    }
+    .remark-form{
+        margin-left: 20px;
+    }
+    .form-data--input{
+        width: 70%;
+    }
+
+
+
+}
+@media (max-width: 576px) {
+    .small-row .article {
+        width: 100%;
+    }
+    .article-big {
+        height: 400px;
+        margin: 15px 0;
+    }
+
+    .article-big .article-description {
+        bottom: 70px;
+    }
+    .article-big .article-description {
+        left: 20px;
+    }
+    .portfolio-card {
+        width: 100%;
+        padding: 0 50px;
+        height: 350px;
+    }
+    .portfolio-btn {
+        margin: 50px auto 0;
+    }
+    .callback-form {
+        padding: 15px 20px;
+        width: 100%;
+    }
+    .footer-list {
+        flex-direction: column;
+    }
+    .footer-list li {
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+
+

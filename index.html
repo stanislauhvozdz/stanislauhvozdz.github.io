@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
 
 <body>
     <header class="header">
+        <h1 class="visually-hidden">My blog</h1>
         <div class="container">
             <nav class="header-nav">
                 <a href="#" class="header-nav--link">
@@ -25,6 +27,7 @@
                     <li class="header-nav--list_item"><a href="#callback" class="nav-link">Написать мне</a></li>
                 </ul>
             </nav>
+            <button type="button" class="burger">Открыть меню</button>
         </div>
     </header>
     <main>
@@ -34,95 +37,94 @@
                     <h2 class="section-title">Все статьи</h2>
                     <form action="" class="section-form">
                         <select class="select-css">
-                            <option>Выбрать тему</option>
-                            <option>Путешествия</option>
-                            <option>Города</option>
-                            <option>Книги</option>
-                            <option>Фотографии</option>
-                            <option>Друзья</option>
+                            <option value="all">Выбрать тему</option>
+                            <option value="travel">Путешествия</option>
+                            <option value="city">Города</option>
+                            <option value="books">Книги</option>
+                            <option value="photo">Фотографии</option>
+                            <option value="">Друзья</option>
                         </select>
                     </form>
                 </div>
-                <div class="news-article-wrapper">
-                    <article class="article">
-                        <img src="img/article-1.png" alt="Улицы берлина" width="387" height="268">
-                        <div class="article-description">
-                            <a href="desctop2.html">
-                                <h3 class="article-title">Путешествие в Берлин в августе</h3>
-                            </a>
-                            <p class="article-text">Летний месяц я провела в столице Германии вместе с друзьями. И вот
-                                как
-                                это было!</p>
-                            <div class="article-tag">
-                                <span>Теги: путешествия</span>
-                                <time>29.09.2020</time>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article">
-                        <img src="img/article-2.png" alt="Колдбрю" width="387" height="268">
-                        <div class="article-description">
-                            <a href="desctop2.html">
-                                <h3 class="article-title">Где выпить колдбрю в Москве</h3>
-                            </a>
-                            <p class="article-text">Собрала для вас список любимых кофеен,
-                                где подают лучший летний напиток.</p>
-                            <div class="article-tag">
-                                <span>Теги: город</span>
-                                <time>24.07.2020</time>
-                            </div>
 
+
+                <div class="news-article small-row">
+                    <article class="article article-preview" data-category="travel">
+                        <img src="img/article-1.png" alt="Улицы берлина">
+                        <a href="desctop2.html">
+                            <h3 class="article-title">Путешествие в Берлин в августе</h3>
+                        </a>
+                        <p class="article-text">Летний месяц я провела в столице Германии вместе с друзьями. И вот как
+                            это было!</p>
+                        <div class="article-tag">
+                            <span>Теги: путешествия</span>
+                            <time datetime="2020-09-29">29.09.2020</time>
                         </div>
                     </article>
-                    <article class="article">
-                        <img src="img/article-3.png" alt="Книги" width="387" height="268">
-                        <div class="article-description">
-                            <a href="desctop2.html">
-                                <h3 class="article-title">Прочитано: книжные рекомендации</h3>
-                            </a>
-                            <p class="article-text">Рассказываю о прочитанных за последнее время книгах: фавориты и
-                                провалы.
-                            </p>
-                            <div class="article-tag">
-                                <span>Теги: книги</span>
-                                <time>15.07.2020</time>
-                            </div>
+                    <article class="article article-preview" data-category="city">
+                        <img src="img/article-2.png" alt="Колдбрю">
+
+                        <a href="desctop2.html">
+                            <h3 class="article-title">Где выпить колдбрю в Москве</h3>
+                        </a>
+                        <p class="article-text">Собрала для вас список любимых кофеен,
+                            где подают лучший летний напиток.</p>
+                        <div class="article-tag">
+                            <span>Теги: город</span>
+                            <time datetime="2020-07-24">24.07.2020</time>
                         </div>
                     </article>
-                    <article class="article-big big-1">
+                    <article class="article article-preview" data-category="books">
+                        <img src="img/article-3.png" alt="Книги">
+
+                        <a href="desctop2.html">
+                            <h3 class="article-title">Прочитано: книжные рекомендации</h3>
+                        </a>
+                        <p class="article-text">Рассказываю о прочитанных за последнее время книгах: фавориты и
+                            провалы.
+                        </p>
+                        <div class="article-tag">
+                            <span>Теги: книги</span>
+                            <time datetime="2020-07-15">15.07.2020</time>
+                        </div>
+                    </article>
+                </div>
+                <div class="news-article big-row">
+                    <article class="article-big big-1 article-preview" data-category="photo">
                         <div class="article-description">
                             <a href="desctop2.html">
                                 <h3 class="article-title h3-big">Снимки на плёнку</h3>
                             </a>
-                            <p class="article-text">Поделилась с вами весенними фотографиями,
-                                и секретами удачных снимков.</p>
+                            <p class="article-text">Поделилась с вами весенними фотографиями, и секретами удачных
+                                снимков.</p>
                             <div class="article-tag">
                                 <span>Теги: фотографии</span>
-                                <time>29.06.2020</time>
+                                <time datetime="2020-06-29">29.06.2020</time>
                             </div>
                         </div>
                     </article>
-                    <article class="article-big big-2">
+                    <article class="article-big big-2 article-preview" data-category="recipe">
                         <div class="article-description">
                             <a href="desctop2.html">
                                 <h3 class="article-title h3-big">Домашний чизкейк</h3>
                             </a>
-                            <p class="article-text">Что может быть лучше чизкейка с сезонными
-                                ягодами? Только домашний чизкейк!</p>
+                            <p class="article-text">Что может быть лучше чизкейка с сезонными ягодами? Только домашний
+                                чизкейк!</p>
                             <div class="article-tag">
                                 <span>Теги: рецепты</span>
-                                <time>24.06.2020</time>
+                                <time datetime="2020-06-24">24.06.2020</time>
                             </div>
                         </div>
                     </article>
                 </div>
-
                 <button class="btn news-article-btn">Показать ещё</button>
             </section>
             <section class="aboutme" id="aboutme">
                 <h2 class="section-title">Обо мне</h2>
                 <div class="aboutme-wrapper">
-                    <img src="img/aboutme-img.png" alt="Моё фото" class="abouyme-img" width="590px" height="693px">
+                    <div class="left">
+                        <img src="img/aboutme-img.png" alt="Моё фото" class="aboutme-img">
+                    </div>
                     <div class="aboutme-decription">
                         <div class="decription-text">
                             <p>Всем привет! Меня зовут Аня, и это мой личный блог. <br>
@@ -153,20 +155,20 @@
                 <div class="portfolio-wrapper">
                     <div class="portfolio-card card-1">
 
-                        <h4 class="card-title">Блог HTML Academy</h4>
+                        <h3 class="card-title">Блог HTML Academy</h3>
                         <p class="card-subtitle">«Как учиться продуктивно»</p>
                         <p class="card-text">Про основные методы обучения, которые помогут быстро и надолго
                             запомнить информацию.</p>
                     </div>
                     <div class="portfolio-card card-2">
-                        <h4 class="card-title">Журнал «LNK»</h4>
+                        <h3 class="card-title">Журнал «LNK»</h3>
                         <p class="card-subtitle">«Зачем поцелуи нужны человеку?
                             И какие они бывают»</p>
                         <p class="card-text">Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются?
                             Какие смысли вкладывают в этот ритуал? И где корни этой практики?</p>
                     </div>
                     <div class="portfolio-card card-3">
-                        <h4 class="card-title">Журнал «Т — Л»</h4>
+                        <h3 class="card-title">Журнал «Т — Л»</h3>
                         <p class="card-subtitle">«Советы по эффективной
                             удалённой работе»</p>
                         <p class="card-text">Поделилась лайфхаками, которые помогают
@@ -178,21 +180,23 @@
             <section class="callback" id="callback">
                 <h2 class="section-title">Написать мне</h2>
                 <div class="callback-wrapper">
-                    <form action="" class="callback-form" name="callback-form">
-                        <label class="form-label">Ваше имя<br>
-                            <input type="text" class="form-imput--name" placeholder="Иван Иванов" required
-                                oninvalid="setCustomValidity('ты чЁ ОМОН?! не скрывай имя')" pattern="/^[\w_]{6,200}$/">
+                    <form action="#" class="callback-form back-form" name="callback-form">
+                        <label class="form-label textlabel">Ваше имя<br>
+                            <input required type="text" class="form-imput--name" placeholder="Иван Иванов"
+                                oninvalid="setCustomValidity('ты чЁ ОМОН?! не скрывай имя')" required>
                         </label>
-                        <label class="form-label">Email <br>
-                            <input type="text" class="form-imput--email" placeholder="zhive-belarus@tut.by" required
-                                pattern="/^[\w_]{6,200}$/">
+                        <label class="form-label textlabel">Email <br>
+                            <input required type="text" class="form-imput--email" placeholder="zhive-belarus@tut.by"
+                                required>
                         </label>
-                        <label class="form-label">Сообщение <br>
-                            <textarea name="" cols="100" rows="10" class="form-imput--measage"
+                        <label class="form-label arealabel">Сообщение <br>
+                            <textarea id="comment-textarea"
+                                class="form-imput--measage  comment-textarea comment-area back-field"
                                 placeholder="Напишите тут ваше сообщение"></textarea>
-
+                            <span class="text-counter remark-span">Использовано <output class="char-counter-odin"
+                                    for="comment-textarea">0</output>/200 символов</span>
                         </label>
-                        <button type="submit" class="btn callback-btn">Отправить</button>
+                        <button type="submit" class="btn callback-btn submit-button">Отправить</button>
                     </form>
 
                 </div>
@@ -209,6 +213,9 @@
             </ul>
         </div>
     </footer>
+    <script src="js/like.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/textarea.js"></script>
 </body>
 
 </html>

@@ -17,16 +17,17 @@
     <header class="header header-desctop2">
         <div class="container">
             <nav class="header-nav">
-                <a href="#" class="header-nav--link">
+                <a href="index.html" class="header-nav--link">
                     <img src="img/blog-logo.svg" alt="Логотип Блога">
                 </a>
-                <ul class="header-nav--list">
+                <ul class="header-nav--list desctop-nav-list">
                     <li class="header-nav--list_item"><a href="#article" class="nav-link">Статьи</a></li>
                     <li class="header-nav--list_item"><a href="#aboutme" class="nav-link">Обо мне</a></li>
                     <li class="header-nav--list_item"><a href="#portfolio" class="nav-link">Портфолио</a></li>
                     <li class="header-nav--list_item"><a href="#callback" class="nav-link">Написать мне</a></li>
                 </ul>
             </nav>
+            <button type="button" class="burger">Открыть меню</button>
         </div>
     </header>
     <main>
@@ -83,7 +84,7 @@
                             <button class="like like-btn" type="button">
                                 <span class="likes-number">16</span>
                             </button>
-                            
+
                         </div>
                         <div class="score-newspaper--social">
                             <a href="#"><img src="img/twitter.svg" alt="Icon Twitter" height="50px" width="50px"></a>
@@ -94,47 +95,61 @@
 
                 </div>
                 <p class="section-title newpaper-backout"><a href="index.html #article">Ко всем статьям</a></p>
-                <div class="newspaper-comment comment-newspapper">
-                    <div class="comment-newspapper-twit">
-                        <div class="twit-items">
-                            <img src="img/twit-img1.png" alt="Аватарка Ивана" class="twit-items-icon">
-                            <p class="twit-name">Иван Петров</p>
-                            <p class="twit-text">Отличная статья! Спасибо.</p>
-                        </div>
-                        <div class="twit-items">
-                            <img src="img/twit-img2.png" alt="Аватарка Ксении" class="twit-items-icon">
-                            <p class="twit-name">Ксения Ксения</p>
-                            <p class="twit-text">Отличный текст, добавила в закладки.</p>
-                        </div>
-                        <div class="twit-items">
-                            <img src="img/twit-img3.png" alt="Аватарка Ивана" class="twit-items-icon">
-                            <p class="twit-name">Иван Иванов</p>
-                            <p class="twit-text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?
-                            </p>
-                        </div>
+
+                <div class="comment-newspapper-twit">
+                    <div class="twit-items">
+                        <img src="img/twit-img1.png" alt="Аватарка Ивана" class="twit-items-icon">
+                        <p class="twit-name">Иван Петров</p>
+                        <p class="twit-text">Отличная статья! Спасибо.</p>
+                    </div>
+                    <div class="twit-items">
+                        <img src="img/twit-img2.png" alt="Аватарка Ксении" class="twit-items-icon">
+                        <p class="twit-name">Ксения Ксения</p>
+                        <p class="twit-text">Отличный текст, добавила в закладки.</p>
+                    </div>
+                    <div class="twit-items">
+                        <img src="img/twit-img3.png" alt="Аватарка Ивана" class="twit-items-icon">
+                        <p class="twit-name">Иван Иванов</p>
+                        <p class="twit-text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?
+                        </p>
                     </div>
                 </div>
+
             </section>
+            <!-- <ul class="comment-list">
+            <li class="user-comment">Да ну, бред какой-то…</li>
+            <li class="user-comment">Да ну, бред какой-то…</li>
+            <li class="user-comment">Да ну, бред какой-то…</li>
+
+        </ul> -->
             <div class="remark">
                 <h3 class="remark-title">Оставить комментарий</h3>
-                <div class="remark-form">
+                <form class="remark-form comment-form">
 
                     <div class="remark-form-data">
-                        <input class="form-data--input remark-input" type="text" placeholder="Имя"
-                            pattern="/^[\w_]{6,200}$/">
-                        <input class="form-data--input remark-input" type="email" placeholder="Почта"
-                            pattern="/^[\w_]{6,200}$/">
-                        <input class="form-data--input btn" type="submit">
+                        <label>
+                            <input class="form-data--input remark-input" type="text" placeholder="Имя">
+
+                        </label>
+                        <label>
+                            <input class="form-data--input remark-input" type="email" placeholder="Почта">
+
+                        </label>
+                        <button class=" btn remark-btn submit-button" type="submit">Отправить</button>
                     </div>
                     <div class="remark-form-text">
-                        <textarea name="" id="" cols="42" rows="10" placeholder="Написать комментарий..."></textarea>
+                        <textarea class="comment-field comment-textarea comment-area" id="comment-textarea"
+                            placeholder="Написать комментарий..."></textarea>
+                        <span class="text-counter remark-span">Использовано <output class="char-counter"
+                                for="comment-textarea">0</output>/200 символов</span>
                     </div>
 
-                </div>
+                </form>
+
             </div>
         </div>
 
-
+        </div>
 
 
     </main>
@@ -154,7 +169,9 @@
 
 
 
-<script src="js/like.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/textarea.js"></script>
 </body>
 
 </html>
