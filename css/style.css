@@ -140,7 +140,7 @@ a {
     background-image: url(../img/select.svg), linear-gradient(rgba(215, 209, 201, 0.2), rgba(215, 209, 201, 0.2));
     background-repeat: no-repeat, repeat;
     background-position: right 20px top 50%, 0 0;
-    background-size: 0.65em auto, 100%;
+    background-size: 1em auto, 100%;
 }
 
 .select-css::-ms-expand {
@@ -842,11 +842,18 @@ figure img{
     .small-row .article {
         width: 49%;
     }
+    .news-article-btn {
+        margin: 20px auto 60px;
+    }
     .portfolio-card {
         padding: 0 20px;
     }
     .card-title {
         padding-top: 60px;
+    }
+    .portfolio-btn {
+        margin: 20px auto 0;
+        text-transform: uppercase;
     }
     .list-link {
         margin: 20px;
