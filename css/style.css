@@ -996,6 +996,25 @@ figure img {
     .section-title {
         font-size: 24px;
     }
+    .like {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .score-newspaper--social img {
+        margin-right: 15px;
+        height: 30px;
+        width: 30px;
+    }
+    /* .newpaper-backout:after {
+        left: 0;
+    } */
+    .likes-number {
+        line-height: 25px;
+        margin-left: 40px;
+    }
+
+
     .remark-form-text {
         width: 100%;
     }
