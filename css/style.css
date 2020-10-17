@@ -1006,9 +1006,10 @@ figure img {
         height: 30px;
         width: 30px;
     }
-    /* .newpaper-backout:after {
-        left: 0;
-    } */
+    .newpaper-backout:after {
+        right: 0;
+        left: auto;
+    }
     .likes-number {
         line-height: 25px;
         margin-left: 40px;
