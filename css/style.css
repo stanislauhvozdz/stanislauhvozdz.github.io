@@ -1,12 +1,11 @@
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Spectral SC', serif; */
+
 html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -20,6 +19,7 @@ body {
 a {
     text-decoration: none;
 }
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -85,6 +85,7 @@ a {
 .nav-link:active {
     color: rgba(255, 255, 255, 0.7);
 }
+
 .burger {
     padding: 5px;
     background-image: url(../img/menu.svg);
@@ -99,8 +100,7 @@ a {
     display: none;
 }
 
-
-.burger-active{
+.burger-active {
     display: none;
 }
 
@@ -163,25 +163,28 @@ a {
     font-weight: normal;
 }
 
-*[dir="rtl"] .select-css,
-:root:lang(ar) .select-css,
-:root:lang(iw) .select-css {
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
     background-position: left 0.7em top 50%, 0 0;
     padding: 0.6em 0.8em 0.5em 1.4em;
 }
 
-.small-row,
-.big-row {
+.small-row, .big-row {
     display: flex;
     flex-wrap: wrap;
 }
+
 .small-row .article {
     width: 32%;
     margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .article img {
     width: 100%;
 }
+
 .article-title {
     font-weight: bold;
     font-size: 18px;
@@ -200,7 +203,6 @@ a {
 .article-tag {
     display: flex;
     justify-content: space-between;
-
     color: rgba(46, 47, 34, 0.7);
     font-family: Open Sans;
 }
@@ -211,15 +213,17 @@ a {
     color: #ffffff;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .article-description {
     max-width: 387px;
 }
+
 .article-description .h3-big {
     color: #fff;
 }
+
 .article-description .h3-big:hover {
     color: #ff7518;
     transition: 0.5s;
@@ -236,19 +240,31 @@ a {
     background-image: url(../img/article-4.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .big-2 {
     background-image: url(../img/article-5.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 .article-big .article-tag {
     color: rgba(255, 255, 255, 0.7);
 }
-.display-none{
-    display: none;
+
+.display-none {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .btn {
@@ -276,7 +292,7 @@ a {
 }
 
 .news-article-btn {
-    margin: 60px auto 60px;
+    margin: 60px auto 100px;
 }
 
 .aboutme .section-title {
@@ -300,6 +316,7 @@ a {
     width: 100%;
     height: auto;
     align-self: center;
+    object-fit: cover;
 }
 
 .aboutme-decription {
@@ -320,7 +337,6 @@ a {
     font-style: italic;
     font-size: 30px;
     line-height: 40px;
-
     position: relative;
     margin-bottom: 20px;
 }
@@ -329,11 +345,11 @@ a {
     content: "";
     display: inline-block;
     background-color: #d7d1c9;
-    height: 200px;
+    height: 100%;
     width: 3px;
     position: absolute;
     left: -20px;
-    top: -23px;
+    top: 0;
 }
 
 .portfolio .section-title {
@@ -355,6 +371,9 @@ a {
     text-align: center;
     overflow: hidden;
     margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-title {
@@ -363,7 +382,8 @@ a {
     font-size: 20px;
     line-height: 30px;
     font-family: Spectral SC;
-    margin-bottom: 44px;
+    margin: 0 0 50px 0;
+    padding: 0;
 }
 
 .card-subtitle {
@@ -371,7 +391,13 @@ a {
     font-size: 18px;
     line-height: 28px;
     font-family: Spectral SC;
-    margin-bottom: 17px;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.card-text {
+    padding: 0;
+    margin: 0;
 }
 
 .card-1 {
@@ -403,7 +429,7 @@ a {
 }
 
 .portfolio-btn {
-    margin: 120px auto 0;
+    margin: 90px auto 100px;
     text-transform: uppercase;
 }
 
@@ -413,13 +439,13 @@ a {
     text-align: center;
 }
 
-input,
-textarea {
+input, textarea {
     border: 1px solid #000000;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.4);
     padding: 5px 15px;
 }
+
 textarea {
     resize: none;
 }
@@ -446,13 +472,12 @@ textarea {
     padding-bottom: 20px;
     display: inline-block;
 }
+
 .textlabel {
     width: 48%;
 }
 
-.form-imput--name,
-.form-imput--email,
-.form-imput--measage {
+.form-imput--name, .form-imput--email, .form-imput--measage {
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
@@ -464,6 +489,7 @@ textarea {
     width: 100%;
     padding: 20px;
 }
+
 .callback-form .arealabel {
     width: 100%;
 }
@@ -475,17 +501,18 @@ textarea {
 }
 
 .callback-btn {
-    margin: 35px auto 0;
+    margin: 0 auto;
     background-color: initial;
-
     color: #202117;
     text-transform: uppercase;
 }
+
 .submit-button:disabled {
     border: 1px solid rgba(240, 58, 58, 0.5);
     color: rgba(240, 58, 58, 1);
     font-weight: 700;
 }
+
 .comment-form.warning .comment-label {
     color: #f05b29;
 }
@@ -493,21 +520,20 @@ textarea {
 .comment-form.warning .comment-area {
     color: #f52e2e;
 }
+
 .comment-form.warning .remark-form-data .submit-button {
     color: #f05b29;
     border: 1px solid rgba(240, 58, 58, 0.5);
 }
+
 .footer {
     background: #d7d1c9;
-
-    height: 181px;
     margin: 80px auto 0;
-
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     align-items: center;
+    height: 181px;
 }
 
 .footer-list {
@@ -532,18 +558,27 @@ textarea {
 }
 
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
+
 /* DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 DESCTOP-2 */
 
 .container-997 {
-    max-width:1117px;
+    max-width: 1117px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -556,7 +591,8 @@ figure {
     padding: 0;
     margin: 40px 0;
 }
-figure img{
+
+figure img {
     width: 100%;
     margin: 0 auto;
 }
@@ -579,6 +615,7 @@ figure img{
     justify-content: space-between;
     margin: 40px 0;
 }
+
 .like {
     background-image: url(../img/like.svg);
     width: 50px;
@@ -587,6 +624,7 @@ figure img{
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
 .like.added {
     background-image: url(../img/like-black.svg);
     width: 50px;
@@ -608,6 +646,7 @@ figure img{
     line-height: 65px;
     font-size: 24px;
 }
+
 .score-newspaper--social img {
     margin-right: 30px;
 }
@@ -665,9 +704,11 @@ figure img{
     margin-top: 10px;
     margin-left: 10px;
 }
+
 .remark {
     max-width: 90%;
 }
+
 .remark-title {
     font-size: 24px;
     line-height: 33px;
@@ -675,14 +716,15 @@ figure img{
     margin-bottom: 50px;
     padding-left: 87px;
 }
+
 .remark-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 80px;
-   
     margin-left: 87px;
 }
+
 .remark-form-data {
     display: flex;
     flex-direction: column;
@@ -691,14 +733,17 @@ figure img{
     max-height: 206px;
     margin-right: 80px;
 }
+
 .remark-form-data input:first-child {
     margin-top: 0;
 }
+
 .remark-form-data input {
     border-radius: none;
     margin-top: 10px;
     padding: 5px auto 5px 0;
 }
+
 .remark-input {
     border: none;
     border-bottom: 1px solid black;
@@ -706,18 +751,19 @@ figure img{
     width: 220px;
     padding: 5px 0 10px;
 }
-.remark-btn{
+
+.remark-btn {
     width: 220px;
     margin-top: 55px;
 }
 
 .remark-form-text textarea {
     border-radius: 10px;
-   
     width: 406px;
     height: 208px;
     padding: 20px;
 }
+
 .remark-span {
     display: block;
     font-size: 12px;
@@ -725,11 +771,17 @@ figure img{
 }
 
 /* media */
+
 /* media */
+
 /* media */
+
 /* media */
+
 /* media */
+
 /* media */
+
 /* media */
 
 @media (max-width: 992px) {
@@ -764,6 +816,10 @@ figure img{
     .aboutme-decription {
         width: 90%;
     }
+    .decription-text {
+        width: 100%;
+        padding-top: 0;
+    }
     .decription-citation {
         margin-top: 20px;
     }
@@ -777,20 +833,19 @@ figure img{
     .comment-newspapper-twit {
         width: 100%;
     }
-    .remark-form{
+    .remark-form {
         flex-direction: column-reverse;
     }
     .remark-form-data {
         margin-top: 20px;
         max-height: none;
     }
-    .remark-input{
+    .remark-input {
         padding: 20px 0;
     }
-    .form-data--input{
+    .form-data--input {
         width: 60%;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -806,7 +861,7 @@ figure img{
         position: absolute;
         padding: 0;
     }
-    .header-nav--list-active{
+    .header-nav--list-active {
         opacity: 1;
         position: relative;
         top: 95px;
@@ -814,26 +869,22 @@ figure img{
         transform: translate(50%);
         background-color: rgba(255, 255, 255, 0.3);
     }
-    .burger-active{
+    .burger-active {
         background-image: url(../img/close.svg);
-        
     }
     .header-nav--list_item {
         margin: 15px 0;
         padding: 7px 50px;
     }
-
-    .burger{
+    .burger {
         display: block;
         right: 20px;
         top: 25px;
         font-size: 0;
-        
     }
-    
     .article-big {
         width: 100%;
-        margin: 15px 40px;
+        margin: 15px 0;
     }
     .article-big .article-description {
         left: 130px;
@@ -861,15 +912,13 @@ figure img{
     .callback-form {
         padding: 30px 40px;
     }
-
-    .comment-newspapper-twit{
-        width: 90%;
+    .comment-newspapper-twit {
+        width: 100%;
     }
     .remark {
         max-width: 95%;
         margin: 0 auto;
     }
-
     .remark-form-text {
         width: 46%;
         order: 2;
@@ -877,16 +926,14 @@ figure img{
     .remark-title {
         padding-left: 20px;
     }
-    .remark-form{
+    .remark-form {
         margin-left: 20px;
     }
-    .form-data--input{
+    .form-data--input {
         width: 70%;
     }
-
-
-
 }
+
 @media (max-width: 576px) {
     .small-row .article {
         width: 100%;
@@ -895,34 +942,84 @@ figure img{
         height: 400px;
         margin: 15px 0;
     }
-
     .article-big .article-description {
         bottom: 70px;
     }
     .article-big .article-description {
         left: 20px;
     }
+    .article-text {
+        margin: 5px 0 5px 0;
+    }
+    .aboutme-decription {
+        margin-left: 0;
+        width: 100%;
+    }
+    .decription-citation::before {
+        display: none;
+    }
     .portfolio-card {
         width: 100%;
-        padding: 0 50px;
+        padding: 0 20px;
         height: 350px;
     }
     .portfolio-btn {
         margin: 50px auto 0;
     }
+    .card-title {
+        padding-top: 0px;
+    }
     .callback-form {
         padding: 15px 20px;
         width: 100%;
     }
+    .footer {
+        height: auto;
+    }
     .footer-list {
         flex-direction: column;
+        padding: 0;
+        margin-bottom: 0;
     }
     .footer-list li {
         text-align: center;
         margin: 10px;
     }
+    .remark {
+        max-width: 100%;
+    }
+    .select-css {
+        background-image: none;
+        padding: 12px;
+        background-color: rgba(215, 209, 201, 0.2);
+    }
+    .section-title {
+        font-size: 24px;
+    }
+    .remark-form-text {
+        width: 100%;
+    }
+    .remark-form-text textarea {
+        width: 100%;
+    }
+    .form-data--input {
+        width: 100%;
+    }
+    .btn.remark-btn.submit-button {
+        margin: 30px auto 0;
+    }
+    .remark-form {
+        margin-left: 0;
+        margin-bottom: 0;
+
+    }
+    .footer {
+        margin: 60px auto 0;
+    }
+
+
+
+    .remark-form-data {
+        margin-right: 0;
+    }
 }
-
-
-
-
